@@ -87,7 +87,8 @@ a.list-group-item.active .list-group-item-text {
     display: block;
     float: left;
     padding: 10px 20px 10px;
-    margin-left: -20px;
+    margin-left: -140px;
+    margin-right: -100px;
     font-size: 20px;
     font-weight: 200;
     color: #ffffff;
@@ -213,8 +214,8 @@ api-validate label {
 }
 
 .navbar-inverse {
-    background-color: #4c66a4;
-    border-color: #4c66a4;
+    background-color: #205082;
+    border-color: #205082;
 }
 
 .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus {
