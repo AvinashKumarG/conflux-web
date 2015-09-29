@@ -87,12 +87,13 @@ a.list-group-item.active .list-group-item-text {
     display: block;
     float: left;
     padding: 10px 20px 10px;
-    margin-left: -140px;
-    margin-right: -100px;
+    margin-left: -20px;
+    margin-right: 10px;
     font-size: 20px;
     font-weight: 200;
     color: #ffffff;
     text-shadow: 0 1px 0 #080808;
+    height: 10px;
 }
 .navbar-form .search-query {
     //background-color: #f;

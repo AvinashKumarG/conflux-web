@@ -119,7 +119,6 @@
                             <th class="col-sm-2">{{'label.heading.name' | translate}}</th>
                             <th class="col-sm-2">{{'label.heading.clientno' | translate}}</th>
                             <th class="col-sm-2">{{'label.heading.externalid' | translate}}</th>
-                            <!--<li>{{'label.heading.status' | translate}}</li>&ndash;&gt;-->
                             <th class="col-sm-2">{{'label.heading.office' | translate}}</th>
                             <th class="col-sm-2">{{'label.heading.staff' | translate}}
                                 <input ng-model="filterClient" type="text" class="form-control pull-right"
@@ -132,16 +131,12 @@
                 <div class="panel-body" style="height: 250px;overflow-y:auto;">
                     <table class="table table-responsive" style="padding: 0px;">
                         <tr class="pointer-main" dir-paginate="client in clients | orderBy:'displayName':reverse  | filter:filterClient | itemsPerPage: clientsPerPage" total-items="totalClients">
-                            <td class="pointer col-sm-2" data-ng-click="routeTo(client.id)">
+                            <td class="pointer col-sm-2" data-ng-click="viewClient(client.id)">
                                 <i class="icon-stop {{client.status.code | StatusLookup}}"></i> {{client.displayName}}</td>
-                            <td class="pointer col-sm-2" data-ng-click="routeTo(client.id)">{{client.accountNo}}</td>
-                            <td class="pointer col-sm-2" data-ng-click="routeTo(client.id)">{{client.externalId}}</td>
-                            <!--<td class="pointer" data-ng-click="routeTo(client.id)">
-                                <i class="icon-stop {{client.status.code | StatusLookup}}"></i>&nbsp;{{client.status.value}}
-                                <small ng-if="client.subStatus.description">[{{client.subStatus.description}}]</small>
-                            </td>-->
-                            <td class="pointer col-sm-2" data-ng-click="routeTo(client.id)">{{client.officeName}}</td>
-                            <td class="pointer col-sm-2" data-ng-click="routeTo(client.id)">{{client.staffName}}</td>
+                            <td class="pointer col-sm-2" data-ng-click="viewClient(client.id)">{{client.accountNo}}</td>
+                            <td class="pointer col-sm-2" data-ng-click="viewClient(client.id)">{{client.externalId}}</td>
+                            <td class="pointer col-sm-2" data-ng-click="viewClient(client.id)">{{client.officeName}}</td>
+                            <td class="pointer col-sm-2" data-ng-click="viewClient(client.id)">{{client.staffName}}</td>
                         </tr>
 
                     </table>

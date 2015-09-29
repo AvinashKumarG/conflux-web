@@ -10,22 +10,6 @@
             scope.clientCollapsed = true;
             scope.clients = [];
 
-
-
-            scope.routeTo = function (id) {
-                location.path('/viewclient/' + id);
-            };
-
-            scope.redirectCenter = function (id) {
-                location.path('/viewcenter/' + id);
-            };
-            scope.redirectGroup = function (id) {
-                location.path('/viewgroup/' + id);
-            };
-            scope.redirectOffice = function (id) {
-                location.path('/viewoffice/' + id);
-            };
-
             resourceFactory.officeResource.get({officeId: 1}, function (data) {
                 scope.office = data;
                 scope.officeName = data.name;
